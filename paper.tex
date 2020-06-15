@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{enumerate}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\s}[1]{\{#1\}}
+
+\newcommand{\sm}{\setminus}
+\newcommand{\n}{\not}
+\newcommand{\nin}{\n\in}
+\newcommand{\susbet}{\subset}
+
+\newcommand{\sol}{{\bf Solution: }}
+\newcommand{\IF}{\text{ if }}
+\newcommand{\ST}{\text{ such that }}
+\newcommand{\OR}{\text{ or }}
+\newcommand{\AND}{\text{ and }}
+\newcommand{\OTHERWISE}{\text{ otherwise }}
+\newcommand{\FORSOME}{\text{ for some }}
+\newcommand{\lub}{\text{ lub }}
+\newcommand{\glb}{\text{ glb }}
+\newcommand{\FORALL}{\text{ for all }}
+\newcommand{\Hom}{\text{ Hom }}
+\newcommand{\End}{\text{ End }}
+\newcommand{\Lip}{\text{ Lip }}
+
+\newcommand{\GCD}{\text{GCD}}
+\newcommand{\ext}{\text{ext}}
+\newcommand{\Span}{\text{span}}
+\newcommand{\diam}{\text{diam}}
+\newcommand{\supp}{\text{supp}}
+\newcommand{\suppo}{\text{supp}^{\text{o}}}
+
+\newcommand{\N}{\textbf{N}}
+\newcommand{\A}{\textbf{A}}
+\newcommand{\R}{\textbf{R}}
+\newcommand{\Z}{\textbf{Z}}
+\newcommand{\I}{\textbf{I}}
+\newcommand{\C}{\textbf{C}}
+\newcommand{\F}{\textbf{F}}
+\newcommand{\G}{\textbf{G}}
+\newcommand{\HH}{\textbf{H}}
+\newcommand{\Q}{\textbf{Q}}
+\newcommand{\LL}{\textbf{L}}
+\newcommand{\xx}{\textbf{x}}
+\newcommand{\uu}{\textbf{u}}
+\newcommand{\hh}{\textbf{h}}
+
+%\newcommand{\q}{\textbf{q}}
+\newcommand{\g}{\mathscr{g}}
+
+
+\newcommand{\limsupin}{\limsup_{n\to\infty}}
+\newcommand{\limin}{\lim_{n\to\infty}}
+\newcommand{\limft}[2]{\lim_{#1\to#2}}
+\newcommand{\limtin}[1]{\lim_{#1\to\infty}}
+\newcommand{\dlimin}{\underset{n\to\infty}\lim}
+\newcommand{\dlimft}[2]{\underset{#1\to#2}\lim}
+\newcommand{\dlimtin}[1]{\underset{#1\to\infty}\lim}
+
+\newcommand{\sumnin}{\sum_{n=1}^\infty}
+\newcommand{\sumin}[1]{\sum_{#1=1}^\infty}
+
+%%%%% Caligraphic letters
+
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\prob}{\text{Prob}}
+
+
+
+
+%\DeclareMathOperator{\Im}{Im}
+
+
+\renewcommand{\phi}{\varphi}
+
+\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+\renewcommand{\_}[1]{\underline{ #1 }}
+
+
+%\DeclareMathOperator{\ext}{ext}
+\DeclareMathOperator{\im}{Im}
+
+
+
+
+
+%----------Theorems----------
+
+
+\newtheorem{theorem}{Theorem}
+%[section]
+%\newcounter{theorem}[section]
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+
+
+\newtheorem{axiom}{Axiom}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{bonus}[theorem]{Bonus}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{warning}[theorem]{Warning}
+
+
+%\numberwithin{equation}{section}
+
+\author{Michael Noronha}
+
+\begin{document}
+
+Michael Noronha
+\begin{center}
+{\large Theoretical Neuroscience, Final Project}
+\end{center}
+
+For this project, I looked at a perceptual decision task that was studied by Shadlen and Newsome.\footnote{Paper: \url{https://www.pnas.org/content/pnas/93/2/628.full.pdf}} Their study examined the neural basis for a simple visual decision-making task, and their findings showed that neural responses in the lateral intraparietal area (LIP) of the cerebral cortex integrated motion information (essentially) into a decision. I trained an RNN on this task to a target $90\%$ accuracy, and then looked at differences between the performance and dynamics of this model compared to the original results.
+
+\section{Task and Model Details}
+\subsection{Task Description}
+\label{task_breakdown}
+
+The studied task was a single-interval, two-alternative, forced choice discrimination of motion direction. Specifically, a collection of moving dots were shown within a $2$-second interval, with a subset of them moving coherently in the same direction (either left or right), and the rest moving randomly (in any direction). The monkey had to choose left or right based on what direction of the coherent dot motion:
+\begin{enumerate}
+  \item For 350ms, only a single point was visible at the center of the screen, that the monkey fixated on
+  \item For 500ms, the targets (dots on the left or right the monkeys would look at to indicate their choice)
+  \item For 2s, the dot motion was shown
+  \item There was a random delay for approximately $500$ms (the fixation point remained visible)
+  \item The fixation point disappeared and the monkey indicated its choice by looking at the left or right target
+\end{enumerate}
+
+\subsection{Model Description}
+
+\subsubsection{Model Architecture/Training}
+
+I didn't make any modifications to the pycog defaults. My network had an input dimension of $100$, a hidden dimension of $50$, and an output dimension of $2$.
+
+\subsubsection{Model Inputs}
+
+There were a several different ways the input could've been presented
+\begin{enumerate}
+  \item A sequence of images
+  \item A sequence of point locations
+  \item A sequence of point velocities
+  \item A sequence of point directions
+  \item A sequence of direction and coherence levels (possibly with noise)
+\end{enumerate}
+
+Because our goal wasn't to build a perception system for extracting semantic information from images, I didn't consider the first option. The remaining options are ordered in roughly decreasing order of intuitive difficulty. To perform the task effectively, the group of neurons need to learn to track the points well enough to tell how they're moving through time (i.e. understand velocity). Also, the speed isn't important, only the direction a point is moving. Based on this, the fourth option, inputting a sequence of directions, seems like a natural choice. The last option, which is what Song et al. did in their example code,\footnote{Paper: \url{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004792}} seemed easier but less interesting. When the input is a sequence of point directions, the network manages to derive this from the data, so I thought it would be more interesting to look at the dynamics of this network than one that started off with that information.
+
+This illustrates a general trade-off between having information encoded directly in the input (acting like a prior perception system had perfectly extracted it) and forcing the network to extract it itself. I input directions as an angle $\theta$ between $-\pi$ and $\pi$ (so left is $-\pi$, and right is $0$). Then, I sampled points moving in random directions uniformly from the interval $(-\pi, \pi)$. This worked well at a range of coherence levels, from as low as $12.5\%$ (which demonstrated some discriminative power at $\sim 70\%$ accuracy) upwards. Given more time I would've liked to try out the other input types.
+
+\section{Model Results}
+
+\subsection{Target Input and Output}
+
+I constructed the model input as a sequence of point directions in the interval $(-\pi, \pi)$. This meant that each point was completely described by a single point at each time-step. I included $100$ points in the input, so the input vector had $100$ entries. I used the same time intervals as described in the task description above,\ref{task_breakdown} but I combined and shortened the first two windows (fixation and targets appearing) into one shorter interval.
+
+Because we'd like our model to be able to do the task at a variety of coherence levels, I choose a coherence level uniformly from the interval $(0.125, 1)$ when generating each input.\footnote{I would've gone lower, but I ran initial experiments to see if the network could learn lower coherence rates individually, and wasn't successful} To generate the entries at a set coherence level $p\%$, I randomly chose $p\%$ of the inputs and randomly chose between left and right. I set the directions of the coherently-moving indices to this direction for the duration of the input period, and sampled all others uniformly. This made the task intuitively easier than if the random dot motion was more continuous, since the random dots were changing direction \emph{every} time-step, so it'd be interesting to relax this (eg. by sampling an incremental change in direction) as a follow-up. Note that because the coherent point indices were randomly selected in each trial, the model couldn't rely on only paying attention to a subset of the inputs to determine direction.
+
+The target output was a $2$-element vector with the first entry set during the decision period if the coherent motion was to the left, and the second set if the coherent motion was to the right. Here's what these targets look like for a $50\%$ coherence input example (the input has some baseline noise):
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=80mm]{imgs/target_io_example.png}
+  \caption{Constructed (target) input and output sequences}
+\end{figure}
+
+Looking at the input signal isn't very informative, since there's a lot of noise by construction since half the points were move randomly. If we ignore the random motion and think of an idealized, noise-free input, the input looks a lot like the output. It's helpful to visualize this idealized input/output on alongside neural activity from the RNN to see how it's achieving the training objective:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=80mm]{imgs/neural_activity_50p_coh.png}
+  \caption{Neural activity of trained model through time}
+  \label{neural_activity}
+\end{figure}
+
+The plot shows the activations of the two output neurons. As we would hope, there's clear separation with high activation of the neuron corresponding to the target, and low activation of the neuron corresponding to the wrong direction choice. They converge towards the discrimination boundary, fairly quickly after the stimulus stops being shown (it's shown up until $2500$ms, exactly when the drop-off begins). It seems like information about the stimulus is quickly ``forgotten," but enough is retained to make a discrimination.
+
+\subsection{Model Dynamics}
+
+\subsubsection{Neuron Activations}
+
+By looking at the activations through time of the recurrent neuron's, we can see how each neuron in the population responds to the input signal:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=80mm]{imgs/recurrent_activations.png}
+  \caption{Model neuron activations}
+\end{figure}
+
+It looks like a large portion of the neuron's outputs respond to the input stimulus, each with roughly the same response curve (though different scaling). This makes sense since $80\%$ of the neuron's are excitatory. One interesting question is why the response curves are all so similar -- wouldn't it make sense for different neuron's to pick up on different things? I think there are two possible explanations:
+\begin{enumerate}
+  \item We only trained on one very specific task, so there's no reason for neuron's to differentiate
+  \item The indices of the coherently-moving dots in the input were selected randomly, forcing symmetry
+\end{enumerate}
+
+\subsubsection{Neuron Connectivity}
+
+Looking at the network weights, we can clearly see the effect of constraining the network to satisfy Dale's law, with the intermediate layer weights partitioned based on whether they're excitatory or inhibitory.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=80mm]{imgs/recurrent_network_weights_visualization.png}
+  \caption{Network weights visualizations}
+\end{figure}
+
+It's also good to see that the input weight distribution doesn't have any structure. This is good because we constructed our input distribution to not be structured based on index.
+
+\subsubsection{Variable Waiting Time}
+
+To better understand the memory constraints of the model, I tried varying the length of the waiting time between the end of the stimulus and the decision time. I think it's extremely likely the way I trained the model over-fits, but this experiment showed that the framework is able to generalize to random waits. It looks like the model ``hovers" around the target output value starting from the end of the shortest wait time it saw in training:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=50mm]{imgs/random_wait.png}
+  \caption{Response curve of model with random wait}
+\end{figure}
+
+
+\subsection{Comparison to Shadlen and Newsome}
+
+Shadlen and Newsome's paper\footnote{\footnote{Paper: \url{https://www.pnas.org/content/pnas/93/2/628.full.pdf}}} included the following plot:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=60mm]{imgs/shadlen_newsome_diagram.png}
+  \caption{Original data: responses of a LIP neuron during task performance}
+\end{figure}
+
+What it shows is is there's a clear difference between neural responses when the monkey chose left and right, at different coherence levels. While we don't have access to spike data from our neuron, the trial-averaged firing rates correspond roughly with our earlier figure. \ref{neural_activity} For a full comparison, we can look at the three coherence levels from the original figure:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth,scale=0.6,width=50mm]{imgs/0coh_comp.png}
+  \includegraphics[width=\linewidth,scale=0.6,width=50mm]{imgs/125coh_comp.png}
+  \includegraphics[width=\linewidth,scale=0.6,width=50mm]{imgs/neural_activity_50p_coh.png}
+  \caption{Response of neuron when choosing left versus right through time at 0\%, 12.5\%, and 51.2\% coherence resp.}
+\end{figure}
+
+Note that the responses at $0\%$ coherence and $12.5\%$ coherence are exactly the same. This is because we sampled coherence levels from the interval $(0.125, 1)$, so there weren't any training examples covering the lower case. Since the unit activations are rectified linear, maybe the difference disappears due to thresholding.
+
+Comparing to the Shadlen and Newsome paper, the response curves of the model look pretty different from the actual data. The rate of change appears to be larger in the model's neurons, especially at lower coherence levels. The real neuron's seem to change their firing rates more gradually, which might make sense biologically because inducing a really fast change might be less energy-efficient.
+
+Another interesting thing is that the low-coherence examples don't follow the same response-curve pattern of either the high-coherence one or the original data. This trend didn't hold when I trained a networks at a fixed coherence level -- in those cases, the responses looked more like the high-coherence case. This probably just means that the final network (which I trained on random coherence levels) converged even though it didn't generalize well. This is actually not that surprising, since high-coherence examples are much easier to learn, and the termination criteria was based on accuracy. Given more time, I'd try this again with a weighted termination criteria.
+
+\section{Discussion}
+
+Comparing the dynamics of was really interesting, but I think to draw more interesting conclusions I'd need to do more experiments. For example, we know that the monkeys were able to generalize to different coherence levels, so ideally we'd want a model that generalizes better than this final model. It'd also be interesting to look at how stable the responses are across training runs -- anecdotally it seemed like high-coherence examples were easier to learn and resulted in more consistent models than low-coherence examples. That said, this was a super cool project and I really enjoyed working on it :)
+
+\end{document}
